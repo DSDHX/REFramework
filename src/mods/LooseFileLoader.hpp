@@ -57,7 +57,7 @@ private:
 
     std::unique_ptr<FunctionHook> m_path_to_hash_hook{nullptr};
 
-    ModToggle::Ptr m_enabled{ ModToggle::create(generate_name("Enabled")) };
+    ModToggle::Ptr m_enabled{ ModToggle::create(generate_name("Enabled"), true) };
     ModToggle::Ptr m_log_accessed_files{ ModToggle::create(generate_name("LogAccessedFiles")) };
     ModToggle::Ptr m_log_loose_files{ ModToggle::create(generate_name("LogLooseFiles")) };
     bool m_show_recent_files{false}; // Not persistent because its for dev purposes
